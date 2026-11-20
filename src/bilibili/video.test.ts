@@ -1,0 +1,14 @@
+import { expect, test } from "nsh/test";
+import { playerRatio } from "./video";
+
+test("the player takes the video's width over height", () => {
+  expect(Math.abs(playerRatio({ width: 1920, height: 1080 }) - 16 / 9) < 1e-6).toEqual(true);
+  expect(Math.abs(playerRatio({ width: 4, height: 3 }) - 4 / 3) < 1e-6).toEqual(true);
+});
+
+test("a very tall or very wide video is kept within a range", () => {
+  // A portrait clip is shown at its own shape (0.5625), not cropped to a box: the range is
+  // 0.4 to 4, which only stops a degenerate shape from taking the whole screen.
+  expect(playerRatio({ width: 9, height: 16 })).toEqual(0.5625);
+  expect(playerRatio({ width: 40, height: 9 })).toEqual(4);
+});

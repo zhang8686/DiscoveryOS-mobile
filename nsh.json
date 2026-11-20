@@ -1,0 +1,79 @@
+{
+  "name": "DiscoveryX",
+  "id": "com.mrky.discoveryos.mobile",
+  "version": "1.0.0",
+  "build": 27,
+  "icon": "icon.png",
+  "android": {
+    "targetSdk": 35,
+    "usesCleartextTraffic": true
+  },
+  "capabilities": {
+    "statusBar": true,
+    "network": {
+      "hosts": [
+        "www.4d4y.com",
+        "*.4d4y.com",
+        "img02.4d4y.com",
+        "*.bilibili.com",
+        "b23.tv",
+        "bili2233.cn",
+        "*.hdslb.com",
+        "*.bilivideo.com",
+        "*.douyin.com",
+        "*.iesdouyin.com",
+        "*.douyinvod.com",
+        "*.douyinpic.com",
+        "*.douyinstatic.com",
+        "*.byteimg.com",
+        "*.bytecdn.cn",
+        "*.snssdk.com",
+        "*.xiaohongshu.com",
+        "*.xhscdn.com",
+        "github.com",
+        "*.githubusercontent.com"
+      ]
+    },
+    "webview": {
+      "hosts": [
+        "www.4d4y.com",
+        "*.4d4y.com",
+        "*.bilibili.com",
+        "b23.tv",
+        "*.douyin.com",
+        "*.iesdouyin.com",
+        "v.douyin.com",
+        "youtube.com",
+        "*.youtube.com",
+        "v.qq.com",
+        "*.xiaohongshu.com",
+        "x.com",
+        "*.x.com"
+      ]
+    },
+    "openUrl": {
+      "schemes": [
+        "https",
+        "http"
+      ]
+    },
+    "clipboard": true,
+    "process": {
+      "env": [
+        "DISCUZ_COOKIES"
+      ]
+    },
+    "fs": {
+      "read": [
+        "${dataDir}"
+      ],
+      "write": [
+        "${dataDir}"
+      ]
+    },
+    "picker": true
+  },
+  "statusBar": {
+    "foreground": "auto"
+  }
+}

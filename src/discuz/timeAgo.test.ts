@@ -1,0 +1,25 @@
+// The forum's Beijing-time stamps read as relative phrases, whatever the zone.
+import { expect, test } from "nsh/test";
+import { forumDay, timeAgo } from "./timeAgo";
+
+// 2026-11-08 19:00 Beijing time is 11:00 UTC.
+const NOW = Date.UTC(2026, 10, 8, 11, 0);
+
+test("a stamp minutes old reads as minutes ago", () => {
+  expect(timeAgo("2026-11-8 18:57", NOW)).toBe("3 分钟前");
+});
+
+test("hours and days use plural and singular", () => {
+  expect(timeAgo("2026-11-8 14:00", NOW)).toBe("5 小时前");
+  expect(timeAgo("2026-11-7 19:00", NOW)).toBe("1 天前");
+});
+
+test("text that does not parse is shown as it is", () => {
+  expect(timeAgo("昨天 12:00", NOW)).toBe("昨天 12:00");
+});
+
+test("the day of a forum time, with or without a clock time", () => {
+  expect(forumDay("2026-11-8 18:57")).toBe("2026-11-08");
+  expect(forumDay("2026-11-03")).toBe("2026-11-03");
+  expect(forumDay("昨天")).toBe(null);
+});

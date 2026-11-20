@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="shape"><rect x="100" y="100" width="824" height="824" rx="185" ry="185"/></clipPath>
+  </defs>
+  <g clip-path="url(#shape)">
+    <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+    <rect x="0" y="0" width="583" height="1024" fill="#8E80B4"/>
+  </g>
+  <rect x="103" y="103" width="818" height="818" rx="182" ry="182" fill="none" stroke="#C4C4C4" stroke-width="6"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="bold" font-size="260">
+    <text x="574" y="462" text-anchor="end" fill="#FFFFFF">Dis</text>
+    <text x="592" y="462" text-anchor="start" fill="#B8B8B8">co</text>
+    <text x="554" y="682" text-anchor="end" fill="#FFFFFF">ve</text>
+    <text x="572" y="682" text-anchor="start" fill="#B8B8B8">ry</text>
+  </g>
+</svg>
